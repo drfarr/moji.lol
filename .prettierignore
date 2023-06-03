@@ -1,0 +1,8 @@
+out
+_next
+lib
+.next
+nexus-prisma-typegen.ts
+nexus-typegen.ts
+schema.graphql
+

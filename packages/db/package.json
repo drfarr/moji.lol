@@ -1,0 +1,32 @@
+{
+  "name": "@esrevinu/db",
+  "version": "1.0.0",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "license": "MIT",
+  "files": [
+    "dist/**"
+  ],
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "prisma": {
+    "schema": "prisma/schema.prisma",
+    "seed": "ts-node prisma/seed.ts"
+  },
+  "scripts": {
+    "db:generate": "prisma generate && tsc",
+    "postinstall": "npm run db:generate"
+  },
+  "dependencies": {
+    "@pothos/plugin-prisma": "^3.35.4",
+    "@prisma/client": "4.15.0"
+  },
+  "devDependencies": {
+    "prisma": "4.15.0"
+  }
+}

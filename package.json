@@ -1,0 +1,30 @@
+{
+  "name": "moji.lol",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "db:generate": "turbo run db:generate",
+    "db:push": "turbo run db:push db:generate",
+    "db:seed": "turbo run db:seed",
+    "codegen": "turbo run generate --filter=@esrevinu/graphql",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+  },
+  "devDependencies": {
+    "eslint-config-custom": "latest",
+    "prettier": "latest",
+    "turbo": "latest"
+  },
+  "engines": {
+    "npm": ">=7.0.0",
+    "node": ">=14.0.0"
+  },
+  "dependencies": {},
+  "packageManager": "yarn@1.22.18"
+}

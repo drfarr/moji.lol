@@ -1,0 +1,17 @@
+{
+  "name": "configs",
+  "version": "0.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "files": [
+    "eslint-preset.js",
+    "prettier-preset.js"
+  ],
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "5.52.0",
+    "eslint-config-next": "13.1.6",
+    "eslint-config-prettier": "8.3.0",
+    "prettier": "2.8.1"
+  },
+  "devDependencies": {}
+}

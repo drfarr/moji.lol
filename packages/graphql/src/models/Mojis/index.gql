@@ -1,0 +1,9 @@
+query getMojis {
+  mojis {
+    id
+    title
+    tags {
+      title
+    }
+  }
+}

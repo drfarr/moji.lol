@@ -1,0 +1,27 @@
+{
+  "pipeline": {
+    "dev": {
+      "cache": false
+    },
+    "db:push": {
+      "cache": false
+    },
+    "db:seed": {
+      "cache": false
+    },
+    "db:generate": {
+      "outputs": ["dist/**"]
+    },
+    "generate": {
+      "dependsOn": ["^db:generate"],
+      "outputs": ["dist/**"]
+    },
+    "build": {
+      "dependsOn": ["^db:generate", "^generate", "^build"],
+      "outputs": ["dist/**", ".next/**"]
+    },
+    "lint": {
+      "outputs": []
+    }
+  }
+}

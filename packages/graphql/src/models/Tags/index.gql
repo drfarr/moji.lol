@@ -1,0 +1,9 @@
+query getTags {
+  tags {
+    title
+    mojis {
+      id
+      title
+    }
+  }
+}

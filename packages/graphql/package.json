@@ -1,0 +1,44 @@
+{
+  "name": "@esrevinu/graphql",
+  "version": "0.0.0",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "private": true,
+  "license": "MIT",
+  "files": [
+    "dist/**"
+  ],
+  "scripts": {
+    "test": "jest",
+    "dev": "vite",
+    "preview": "vite preview",
+    "clean": "rm -rf dist",
+    "generate": "graphql-codegen --debug --config ./codegen.ts && tsc"
+  },
+  "devDependencies": {
+    "@esrevinu/db": "*",
+    "@graphql-codegen/cli": "3.3.0",
+    "@graphql-codegen/typed-document-node": "4.0.0",
+    "@graphql-codegen/typescript": "3.0.3",
+    "@graphql-codegen/typescript-operations": "3.0.3",
+    "@graphql-codegen/typescript-react-apollo": "3.2.4",
+    "@playwright/test": "1.32.3",
+    "@types/jest": "29.4.0",
+    "@types/react": "18.2.8",
+    "@types/react-dom": "18.2.4",
+    "eslint": "8.33.0",
+    "jest": "29.4.1",
+    "tsconfig": "*",
+    "tsup": "6.1.2",
+    "typescript": "5.1.3"
+  },
+  "jest": {
+    "preset": "scripts/jest/node"
+  },
+  "dependencies": {
+    "@pothos/core": "^3.22.5",
+    "@pothos/plugin-prisma": "^3.35.4",
+    "graphql": "^16.6.0",
+    "graphql-scalars": "^1.22.2"
+  }
+}
